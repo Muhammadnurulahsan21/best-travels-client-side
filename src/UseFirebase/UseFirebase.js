@@ -12,8 +12,9 @@ import {
   GoogleAuthProvider,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import firebaseInitialization from "./../Firebase/Firebase.init.js";
-firebaseInitialization();
+import initializeAuthentication from "../Firebase/firebase.init";
+
+initializeAuthentication();
 
 // Providers
 const googleProvider = new GoogleAuthProvider();
