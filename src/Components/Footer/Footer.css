@@ -1,0 +1,138 @@
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.custom-padding{
+    padding-left: 32px;
+}
+
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 30px 0;
+}
+.footer-col{
+   width: 30%;
+   padding: 0 40px;
+}
+.footer-col h4{
+	font-size: 20px;
+	color: #ffffff;
+	text-transform: capitalize;
+    margin-top: 30px;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.company::before{
+	content: '';
+	position: absolute;
+	left: 32px;
+	bottom: -12px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 75px;
+}
+.Get::before{
+	content: '';
+	position: absolute;
+	left: 32px;
+	bottom: -12px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 75px;
+}
+.online::before{
+	content: '';
+	position: absolute;
+	left: 32px;
+	bottom: -12px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 75px;
+}
+.news-latter {
+    background-color: #323438;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+  }
+
+
+.follow::before{
+	content: '';
+	position: absolute;
+	left: 0px;
+	bottom: -12px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 75px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 18px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.4s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 10px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #164fdf;
+	background-color: #ffffff;
+}
+
+.text-color{
+    color: #bbbbbb;
+}
+
+.footer-color{
+    background-color: #323438;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+
+

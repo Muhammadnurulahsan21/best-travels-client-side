@@ -1,0 +1,26 @@
+.contact-text {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+ 
+}
+.contact-text::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 80px;
+  left: 47%;
+  background-color: #e91e63;
+  bottom: -50%;
+}
+.bg-img {
+  background-image: linear-gradient(
+      rgba(54, 78, 80, 0.4),
+      rgba(55, 83, 85, 0.4)
+    ),
+    url(../../img/contact.jpg);
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}

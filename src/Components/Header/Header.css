@@ -11,14 +11,21 @@
     text-decoration: none;
 }
 
+div a{
+    text-decoration: none;
+}
+
 .header-text{
     background-color: #484c54;
 }
 
 .nav-color{
-    background-color: #defff2;
+    background-color: #d5faff;
    
 }
 .login-text{
     font-size: 15px;
+}
+.cursor{
+ cursor: pointer;
 }

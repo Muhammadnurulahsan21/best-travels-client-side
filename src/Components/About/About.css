@@ -1,0 +1,100 @@
+.about-bg-img {
+  background-image: linear-gradient(
+      rgba(87, 130, 133, 0.3),
+      rgba(87, 130, 133, 0.3)
+    ),
+    url(../../img/about.jpg);
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+
+.about-text {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+}
+.about-text::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 64px;
+  left: 48%;
+  background-color: #e91e63;
+  bottom: -50%;
+}
+
+.frist-img {
+  background-image: linear-gradient(
+      rgba(54, 78, 80, 0),
+      rgba(55, 83, 85, 0.616)
+    ),
+    url(../../img/1about.jpg);
+  height: 370px;
+  width: 370px;
+  margin-right: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.second-img {
+  background-image: linear-gradient(
+      rgba(54, 78, 80, 0),
+      rgba(55, 83, 85, 0.616)
+    ),
+    url(../../img/2about.jpg);
+  height: 370px;
+  width: 370px;
+  margin-right: 30px;
+  background-position: center;
+  background-size: cover;
+}
+.third-img {
+  background-image: linear-gradient(
+      rgba(54, 78, 80, 0),
+      rgba(55, 83, 85, 0.616)
+    ),
+    url(../../img/3about.jpg);
+  height: 370px;
+  width: 370px;
+  background-position: center;
+  background-size: cover;
+}
+
+.img-text {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+}
+.lower-banner {
+  background-image: linear-gradient(
+      rgba(191, 180, 172, 0.4),
+      rgba(88, 84, 80, 0.658)
+    ),
+    url(../../img/lower-banner.jpg);
+  height: 480px;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.text-size{
+ font-size: 3em;
+}
+.small1s-text{
+    font-size: 0.6em;
+    background-color: #BA71DA;
+}
+.small2s-text{
+    font-size: 0.6em;
+    background-color: #14B9D5;
+}
+.small3s-text{
+    font-size: 0.6em;
+    background-color: #F76570;
+}
+.small4s-text{
+    font-size: 0.6em;
+    background-color: #1BBC9B;
+}

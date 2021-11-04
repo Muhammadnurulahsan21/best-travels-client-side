@@ -3,7 +3,7 @@ import "./HomePackages.css"
 
 const HomePackages = () => {
     return (
-        <div>
+        <div className="custom-margin">
             <h2>This is Homepackages</h2>
         </div>
     );

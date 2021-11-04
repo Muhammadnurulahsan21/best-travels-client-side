@@ -3,7 +3,7 @@ import "./AddYourReview.css";
 
 const AddYourReview = () => {
     return (
-        <div>
+        <div className="custom-margin">
            <h2>This is your review</h2> 
         </div>
     );

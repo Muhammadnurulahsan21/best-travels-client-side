@@ -3,7 +3,7 @@ import "./MyBookings.css"
 
 const MyBookings = () => {
     return (
-        <div>
+        <div className="custom-margin">
             <h2>This is my bookings</h2>
         </div>
     );
