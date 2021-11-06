@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./Components/About/About";
-import BookNow from "./Components/BookNow/BookNow";
+import BookNowDR from "./Components/BookNowDR/BookNowDR";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
@@ -40,7 +40,7 @@ function App() {
               <ContactUs></ContactUs>
             </Route>
             <PrivateRoute exact path="/booknow">
-              <BookNow></BookNow>
+              <BookNowDR></BookNowDR>
             </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>

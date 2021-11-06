@@ -1,7 +1,7 @@
 import React from 'react';
-import "./BookNow.css" 
+import "./BookNowDR.css" 
 
-const BookNow = () => {
+const BookNowDR = () => {
     return (
         <div>
             <h2>This is a booknow</h2>
@@ -10,4 +10,4 @@ const BookNow = () => {
 };
  
 
-export default BookNow;
+export default BookNowDR;
