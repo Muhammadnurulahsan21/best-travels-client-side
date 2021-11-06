@@ -1,0 +1,27 @@
+.manageallbookings-frist-banner {
+  background-image: linear-gradient(
+      rgba(191, 180, 172, 0.137),
+      rgba(88, 84, 80, 0.39)
+    ),
+    url(../../img/manageallbookings.jpg);
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+
+.manageallbookings-text {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+}
+
+.manageallbookings-text::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 170px;
+  left: 44%;
+  background-color: #e91e63;
+  bottom: -30%;
+}

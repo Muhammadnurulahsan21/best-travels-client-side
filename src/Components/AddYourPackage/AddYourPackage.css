@@ -1,22 +1,22 @@
-.bookings-frist-banner {
+.addyourpackage-frist-banner {
   background-image: linear-gradient(
       rgba(191, 180, 172, 0.137),
       rgba(88, 84, 80, 0.39)
     ),
-    url(../../img/mybookings.jpg);
+    url(../../img/addyourpackage2.jpg);
   height: 400px;
   background-position: center;
   background-size: cover;
 }
 
-.mybookings-text {
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: relative;
-  }
+.addyourpackage-text {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+}
 
-.mybookings-text::after {
+.addyourpackage-text::after {
   content: "";
   position: absolute;
   height: 3px;

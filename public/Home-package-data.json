@@ -1,0 +1,50 @@
+[
+    {
+        "price": "700 $",
+        "city": "Berlin",
+        "continent": "Europe",
+        "cityspeacial":  "Cultural",
+        "description": "Berlin straddles the banks of the Spree, which flows into the Havel (a tributary of the Elbe) in the western borough.",
+        "img": "https://i.ibb.co/T1sTD3Y/berlin-1.jpg"
+      },
+    {
+        "price": "500 $",
+        "city": "New Delhi",
+        "continent": "Asia",
+        "cityspeacial":  "History",
+        "description": "Delhi, is a city and a union territory of India containing New Delhi, the capital of India.[17][18] Located on the Yamuna river.",
+        "img": "https://i.ibb.co/gdjm5MZ/delhi-2.jpg"
+      },
+    {
+        "price": "400 $",
+        "city": "London",
+        "continent": "England",
+        "cityspeacial":  "Sport",
+        "description": "The City of London is a city, ceremonial county and local government district that contains the historic centre and the primary.",
+        "img": "https://i.ibb.co/BwpHzg1/london-3.jpg"
+      },
+    {
+        "price": "1200 $",
+        "city": "Cuba",
+        "continent": "America",
+        "cityspeacial":  "Relax",
+        "description": "Cuba City is a city partly in Grant County and partly in Lafayette County in the U.S. state of Wisconsin. The population 2010 census.",
+        "img": "https://i.ibb.co/mbppwtp/cuba-4.jpg"
+      },
+    {
+        "price": "1500 $",
+        "city": "Rome",
+        "continent": "Italy",
+        "cityspeacial":  "History",
+        "description": "Rome is the capital city of Italy. It is also the capital of the Lazio region, the centre of the Metropolitan City of Rome.",
+        "img": "https://i.ibb.co/SXQmqzn/rome-5.jpg"
+      },
+    {
+        "price": "730 $",
+        "city": "Dubai",
+        "continent": "Asia",
+        "cityspeacial":  "Sport",
+        "description": "Dubai Dubayy Gulf Arabic is the most populous city in the United Arab Emirates (UAE) and the capital of the Emirate of Dubai.",
+        "img": "https://i.ibb.co/fxfZzYm/dubai-6.jpg"
+      }
+]

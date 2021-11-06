@@ -1,23 +1,110 @@
-.custom-margin{
-    margin-top: 130px;
-  }
-  .fristline-text {
-    font-size: 70px !important;
-  }
-  .secondline-text {
-    font-size: 42px !important;
-  }
-  .tour-text{
-      font-weight: 400;
-  }
-  .best-travel::after {
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 300px;
-    left: 40%;
-    bottom: -21%;
-    background-color: #e91e63;
-    
-  }
-  
+.custom-margin {
+  margin-top: 130px;
+}
+.fristline-text {
+  font-size: 70px !important;
+}
+.secondline-text {
+  font-size: 42px !important;
+}
+.tour-text {
+  font-weight: 400;
+}
+.best-travel::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 300px;
+  left: 40%;
+  bottom: -21%;
+  background-color: #e91e63;
+}
+
+.summer-banner {
+  background-image: linear-gradient(
+      rgba(191, 180, 172, 0.4),
+      rgba(88, 84, 80, 0.658)
+    ),
+    url(../../img/summer.jpg);
+  height: 480px;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.summer-promotion::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100px;
+  left: 46%;
+  bottom: -49%;
+  background-color: #e91e63;
+}
+.destinations::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 150px;
+  left: 45%;
+  bottom: -121%;
+  background-color: #e91e63;
+}
+
+.distanation-one{
+  background-image: 
+    url(../../img/destination-1.jpg);
+  height: 450px;
+  width: 300px;
+  background-position: center center;
+  background-size: cover;
+}
+.distanation-two{
+  background-image: 
+    url(../../img/destination-2.jpg);
+  height: 450px;
+  width: 300px;
+  background-position: center center;
+  background-size: cover;
+}
+.distanation-three{
+  background-image:
+    url(../../img/destination-3.jpg);
+  height: 450px;
+  width: 300px;
+  background-position: center center;
+  background-size: cover;
+}
+.distanation-four{
+  background-image: 
+    url(../../img/destination-4.jpg);
+  height: 450px;
+  width: 300px;
+  background-position: center center;
+  background-size: cover;
+}
+.bg-text{
+  background-color: aliceblue;
+}
+
+.home-lower-banner {
+  background-image: linear-gradient(
+      rgba(191, 180, 172, 0.158),
+      rgba(88, 84, 80, 0.658)
+    ),
+    url(../../img/home-lower-banner.jpg);
+  height: 480px;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.packages::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 150px;
+  left: 45%;
+  bottom: -296%;
+  background-color: #e91e63;
+}

@@ -28,11 +28,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="container">
-          <div class="row">
+      <footer className="footer">
+        <div className="container">
+          <div className="row">
             <div className="d-flex ">
-            <div class="footer-col">
+            <div className="footer-col">
               <h4 className="custom-padding company">company</h4>
               <ul>
                 <li>
@@ -45,11 +45,11 @@ const Footer = () => {
                   <Link to="/about">about</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Contact us</Link>
+                  <Link to="/contactus">Contact us</Link>
                 </li>
               </ul>
             </div>
-            <div class="footer-col">
+            <div className="footer-col">
               <h4 className="custom-padding Get">Get help</h4>
               <ul>
                 <li>
@@ -59,14 +59,14 @@ const Footer = () => {
                   <Link to="/myorders">My orders</Link>
                 </li>
                 <li>
-                  <Link to="/">order status</Link>
+                  <Link to="/notfound">Not Found</Link>
                 </li>
                 <li>
                   <Link to="/">Terms Conditions</Link>
                 </li>
               </ul>
             </div>
-            <div class="footer-col">
+            <div className="footer-col">
               <h4 className="custom-padding online">online shop</h4>
               <ul>
                 <li>
@@ -83,9 +83,9 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div class="footer-col ">
+            <div className="footer-col ">
               <h4 className="follow">follow us</h4>
-              <div class="social-links">
+              <div className="social-links">
                 <Link to="/">
                   <FontAwesomeIcon icon={faFacebookSquare} size="lg" />
                 </Link>

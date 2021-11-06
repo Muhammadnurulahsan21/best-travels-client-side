@@ -1,0 +1,142 @@
+[
+    {
+        "price": "700 $",
+        "city": "Berlin",
+        "continent": "Europe",
+        "cityspeacial":  "Cultural",
+        "description": "Berlin straddles the banks of the Spree, which flows into the Havel (a tributary of the Elbe) in the western borough.",
+        "img": "https://i.ibb.co/T1sTD3Y/berlin-1.jpg"
+      },
+    {
+        "price": "500 $",
+        "city": "New Delhi",
+        "continent": "Asia",
+        "cityspeacial":  "History",
+        "description": "Delhi, is a city and a union territory of India containing New Delhi, the capital of India.[17][18] Located on the Yamuna river.",
+        "img": "https://i.ibb.co/gdjm5MZ/delhi-2.jpg"
+      },
+    {
+        "price": "400 $",
+        "city": "London",
+        "continent": "England",
+        "cityspeacial":  "Sport",
+        "description": "The City of London is a city, ceremonial county and local government district that contains the historic centre and the primary.",
+        "img": "https://i.ibb.co/BwpHzg1/london-3.jpg"
+      },
+    {
+        "price": "1200 $",
+        "city": "Cuba",
+        "continent": "America",
+        "cityspeacial":  "Relax",
+        "description": "Cuba City is a city partly in Grant County and partly in Lafayette County in the U.S. state of Wisconsin. The population 2010 census.",
+        "img": "https://i.ibb.co/mbppwtp/cuba-4.jpg"
+      },
+    {
+        "price": "1500 $",
+        "city": "Rome",
+        "continent": "Italy",
+        "cityspeacial":  "History",
+        "description": "Rome is the capital city of Italy. It is also the capital of the Lazio region, the centre of the Metropolitan City of Rome.",
+        "img": "https://i.ibb.co/SXQmqzn/rome-5.jpg"
+      },
+    {
+        "price": "730 $",
+        "city": "Dubai",
+        "continent": "Asia",
+        "cityspeacial":  "Sport",
+        "description": "Dubai Dubayy Gulf Arabic is the most populous city in the United Arab Emirates (UAE) and the capital of the Emirate of Dubai.",
+        "img": "https://i.ibb.co/fxfZzYm/dubai-6.jpg"
+      },
+    {
+        "price": "1200 $",
+        "city": "South Island", 
+        "continent": "New Zealand",
+        "cityspeacial":  "Relax",
+        "description": "The South Island, also officially named Te Waipounamu, is the larger of the two major islands of New Zealand in surface area.",
+        "img": "https://i.ibb.co/kJsLsXg/South-Island-7.jpg"
+      },
+    {
+        "price": "1500 $",
+        "city": "Paris",
+        "continent": "France",
+        "cityspeacial":  "Eiffel Tower",
+        "description": "The Eiffel Tower French: tour Eiffel (About this soundlisten)) is a wrought-iron lattice tower on the Champ de Mars in Paris, France.",
+        "img": "https://i.ibb.co/XDKzGNG/Paris-8.jpg"
+      },
+    {
+        "price": "850 $",
+        "city": "Bora Bora",
+        "continent": "French Island",
+        "cityspeacial":  "Luxurious Resorts",
+        "description": "Bora Bora is an island group in the Leeward Islands. The Leeward Islands comprise the western part of the Society Islands of French Polynesia.",
+        "img": "https://i.ibb.co/TYjW7Cp/bora-9.jpg"
+      },
+    {
+        "price": "1750 $",
+        "city": "Maui",
+        "continent": "United States",
+        "cityspeacial":  "Simply Relaxing",
+        "description": "The island of Maui is the second-largest of the Hawaiian Islands at 727.2 square miles and is the 17th largest island in the United States.",
+        "img": "https://i.ibb.co/9NtCscK/maui-10.jpg"
+      },
+    {
+        "price": "900 $",
+        "city": "Tahiti",
+        "continent": "Oceania",
+        "cityspeacial":  "Largest Island",
+        "description": "Tahiti is the largest island of the Windward group of the Society Islands in French Polynesia, located in the central part of the Pacific Ocean.",
+        "img": "https://i.ibb.co/pdcvNxK/tahiti-11.jpg"
+      },
+    {
+        "price": "700 $",
+        "city": "Tokyoi",
+        "continent": "Asia",
+        "cityspeacial":  "Old Temples",
+        "description": "Tokyo officially the Tokyo Metropolis, is the capital and most populous prefecture of Japan. Located at the head of Tokyo Bay,",
+        "img": "https://i.ibb.co/2F6bbcX/tokyo-12.jpg"
+      }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

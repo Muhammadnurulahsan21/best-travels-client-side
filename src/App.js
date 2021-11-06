@@ -11,12 +11,11 @@ import Packages from "./Components/Packages/Packages";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Register from "./Components/Register/Register";
 import AuthProvider from "./ContextApi/AuthProvider";
-import NotFound from './Components/NotFound/NotFound';
+import NotFound from "./Components/NotFound/NotFound";
 import MyBookings from "./Components/MyBookings/MyBookings";
 import ManageAllBookings from "./Components/ManageAllBookings/ManageAllBookings";
-import AddYourReview from "./Components/AddYourReview/AddYourReview";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import AddYourPackage from './Components/AddYourPackage/AddYourPackage';
 
 function App() {
   return (
@@ -55,8 +54,8 @@ function App() {
             <Route exact path="/manageallbookings">
               <ManageAllBookings></ManageAllBookings>
             </Route>
-            <Route exact path="/addyourreview">
-              <AddYourReview></AddYourReview>
+            <Route exact path="/addyourpackage">
+              <AddYourPackage></AddYourPackage>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
