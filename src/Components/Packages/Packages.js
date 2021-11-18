@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Packages.css";
-import PackagesCard from './../PackagesCard/PackagesCard';
-
+import PackagesCard from "./../PackagesCard/PackagesCard";
 
 const Packages = () => {
   const [allPackages, setAllPackages] = useState([]);
@@ -36,14 +35,6 @@ const Packages = () => {
           ))}
         </div>
       </div>
-
-
-
-
-
-
-
-
     </div>
   );
 };

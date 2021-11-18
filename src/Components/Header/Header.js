@@ -162,7 +162,7 @@ const Header = () => {
                 </NavLink>
                 <NavLink
                   className="text-dark m-2 custom-navlink"
-                  to="/Packages"
+                  to="/packages"
                 >
                   Packages <span className="text-muted p-3 fw-light">|</span>
                 </NavLink>

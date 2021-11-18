@@ -13,50 +13,7 @@ const About = () => {
         <h2 className="about-text">ABOUT</h2>
       </div>
 
-      <div className="container d-flex justify-content-center pt-5 pb-3">
-        <div className="d-flex">
-          <div>
-            <h1 className="text-secondary text-end fw-normal p-4">
-              Hello...Our agency has been
-              <br /> present for over 20 years. <br />
-              We make the best for all <br /> our customers.
-            </h1>
-          </div>
-          <div>
-            <div>
-              <h5 className="text-secondary fw-light p-4 mt-3 ps-5">
-                Best Travel is collaborates with vel <br /> rehabilitation
-                programs ultricies a <br /> across the country to by connect.
-              </h5>
-            </div>
-            <div>
-              <h5 className="text-secondary fw-light ps-5">
-                Best Travel convenes a annual and <br /> works with partners
-                educational an <br /> events throughout of the year to ut.
-              </h5>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <h5 className="text-secondary fw-light ps-5 p-4 mt-3">
-                Bset Travel is Some of our include <br />
-                public schools in New York and works <br />
-                with partners of our a educational.
-              </h5>
-            </div>
-            <div>
-              <h5 className="text-secondary fw-light ps-5">
-                Travel Unity works with career and <br />
-                technical in high schools, as well as <br />
-                other you and after-school programs.
-              </h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="d-flex justify-content-center container pb-5 mb-5">
+      <div className="d-flex justify-content-center container pt-5 mt-5 pb-5 mb-5">
         <div className="frist-img text-light text-center">
           <h5 className="fw-normal img-text">CITY TOURS</h5>
           <h6 className="fw-normal img-text">CULTURAL AND ARTS</h6>

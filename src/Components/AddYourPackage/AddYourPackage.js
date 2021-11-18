@@ -1,10 +1,36 @@
-import React from "react";
-import { Button, Col, Form, Row } from "react-bootstrap";
+// import React, { useState } from "react";
+import { Button } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import swal from "sweetalert";
 import "./AddYourPackage.css";
 
 const AddYourPackage = () => {
+  const { register, reset, handleSubmit } = useForm();
+  // const [pass, setPass] = useState();
+
+  const onSubmit = (data) => {
+    // data.key = pass;
+    fetch("", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          swal({
+            title: "Package Added Successfully!",
+            // text: `Product Unique Key: ${pass}`,
+            button: "OK!",
+          });
+        }
+      });
+    reset();
+    console.log(data);
+  };
+
   return (
-    <div className="custom-margin">
+    <div className="custom-margin bg-eee">
       <div className="pb-5">
         <div className="addyourpackage-frist-banner text-light text-center">
           <h2 className="addyourpackage-text">Add Your Packages</h2>
@@ -14,53 +40,104 @@ const AddYourPackage = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-center pb-5 ">Add a New Package</h2>
-        <div className="container mb-5">
-          <Form>
-            <Row className="pb-3">
-              <Form.Group as={Col}>
-                <Form.Label>Package Name*</Form.Label>
-                <Form.Control type="text" placeholder="Your Package Name" />
-              </Form.Group>
-              <Form.Group as={Col}>
-                <Form.Label>City Name*</Form.Label>
-                <Form.Control type="text" placeholder="Your City Name" />
-              </Form.Group>
-            </Row>
-            <Row className="pb-3">
-              <Form.Group as={Col}>
-                <Form.Label>Continent*</Form.Label>
-                <Form.Control type="text" placeholder="Your Continent Name" />
-              </Form.Group>
-              <Form.Group as={Col}>
-                <Form.Label>City Special*</Form.Label>
-                <Form.Control type="text" placeholder="City Special" />
-              </Form.Group>
-            </Row>
-            <Row className="pb-3">
-              <Form.Group as={Col}>
-                <Form.Label>Package Price*</Form.Label>
-                <Form.Control type="text" placeholder="Package Price" />
-              </Form.Group>
-              <Form.Group as={Col}>
-                <Form.Label>Discount*</Form.Label>
-                <Form.Control type="text" placeholder="Discount Percentage" />
-              </Form.Group>
-            </Row>
-            <Row className="pb-3">
-              <Form.Group as={Col}>
-                <Form.Label>Description*</Form.Label>
-                <Form.Control type="text" placeholder="Description" />
-              </Form.Group>
-              <Form.Group as={Col}>
-                <Form.Label>Image URL*</Form.Label>
-                <Form.Control type="text" placeholder="Image URL" />
-              </Form.Group>
-            </Row>
-            <Button variant="primary" className="px-5" type="submit">
-              Submit
-            </Button>
-          </Form>
+        <div className="container pb-5">
+          <div className="w-75 mx-auto pb-5">
+            <div className="d-flex justify-content-center">
+              <form className="mt-4 row" onSubmit={handleSubmit(onSubmit)}>
+                <div className="col-12 col-md-6">
+                  <div className="mb-2">
+                    <label className="mb-2">Package Name*</label> <br />
+                    <input
+                      className="form-control shadow-none"
+                      type="text"
+                      {...register("name", { required: true })}
+                      placeholder="Your Package Name"
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label className="mb-2">City Name</label> <br />
+                    <input
+                      className="form-control shadow-none"
+                      type="text"
+                      {...register("location", { required: true })}
+                      placeholder="Your City Name"
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label className="mb-2">Continent*</label> <br />
+                    <input
+                      className="form-control shadow-none"
+                      type="text"
+                      {...register("country", { required: true })}
+                      placeholder="Your Continent Name"
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label className="mb-2">City Special*</label> <br />
+                    <input
+                      className="form-control shadow-none"
+                      type="text"
+                      {...register("days", { required: true })}
+                      placeholder="City Special"
+                    />
+                  </div>
+                  
+                </div>
+                <div className="col-12 col-md-6">
+                <div className="mb-2">
+                    <label className="mb-2">Package Price*</label> <br />
+                    <input
+                      className="form-control shadow-none"
+                      type="number"
+                      {...register("price", {
+                        required: true,
+                      })}
+                      placeholder="Package Price"
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label className="mb-2">Discount*</label> <br />
+                    <input
+                      className="form-control shadow-none"
+                      type="number"
+                      {...register("price", {
+                        required: true,
+                      })}
+                      placeholder="Discount Percentage%"
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label className="mb-2">Description*</label> <br />
+                    <input
+                      className="form-control shadow-none"
+                      type="number"
+                      {...register("price", {
+                        required: true,
+                      })}
+                      placeholder="Description"
+                    />
+                  </div>
+
+                  <div className="mb-3">
+                    <label className="mb-2">Image URL</label> <br />
+                    <input
+                      className="form-control shadow-none"
+                      type="text"
+                      {...register("img1", {
+                        required: true,
+                      })}
+                      placeholder="Img Should Be 600px * 600px"
+                    />
+                  </div>
+                </div>
+                <div className="text-center px-5 mt-3">
+                  <Button variant="btn btn-outline-secondary">
+                    Add Product
+                  </Button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>

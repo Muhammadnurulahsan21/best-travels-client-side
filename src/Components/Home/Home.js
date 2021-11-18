@@ -194,16 +194,6 @@ const Home = () => {
         </div>
       </div>
       </div>
-
-
-      <div>
-      <div className="container pt-5 mb-5">
-        <h3 className="text-center text-secondary">POPULAR PACKAGES</h3>
-        <h3 className="text-center text-muted packages fw-normal">
-        BEST TRAVEL PACKAGES
-        </h3>
-      </div>
-      </div>
     </div>
   );
 };
