@@ -35,9 +35,9 @@
   content: "";
   position: absolute;
   height: 3px;
-  width: 100px;
-  left: 46%;
-  bottom: -49%;
+  width: 150px;
+  left: 45%;
+  bottom: -228%;
   background-color: #e91e63;
 }
 .destinations::after {
@@ -46,7 +46,7 @@
   height: 3px;
   width: 150px;
   left: 45%;
-  bottom: -121%;
+  bottom: -298%;
   background-color: #e91e63;
 }
 

@@ -6,11 +6,9 @@ import "./AddYourPackage.css";
 
 const AddYourPackage = () => {
   const { register, reset, handleSubmit } = useForm();
-  // const [pass, setPass] = useState();
 
   const onSubmit = (data) => {
-    // data.key = pass;
-    fetch("", {
+    fetch("https://frozen-ocean-73745.herokuapp.com/packages", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

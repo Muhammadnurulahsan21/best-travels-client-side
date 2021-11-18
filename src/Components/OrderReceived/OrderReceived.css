@@ -1,0 +1,9 @@
+.side-border{
+    border-right: 1px dashed rgb(184, 184, 184);
+}
+.s-font{
+    font-size: 12px;
+}
+.light-gray-bg{
+    background-color: #a11616;
+}

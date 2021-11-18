@@ -19,7 +19,7 @@ const ManageAllBookings = () => {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        fetch(`https://wicked-wizard-56509.herokuapp.com/orders/${id}`, {
+        fetch(`https://frozen-ocean-73745.herokuapp.com/orders/${id}`, {
           method: "DELETE",
           headers: { "content-type": "application/json" },
         })
@@ -39,7 +39,7 @@ const ManageAllBookings = () => {
     });
   };
   return (
-    <div className="bg-eee pb-5">
+    <div className="bg-eee pb-5 custom-margin">
       <div className="custom-margin">
         <div className="pb-5">
           <div className="manageallbookings-frist-banner text-light text-center">

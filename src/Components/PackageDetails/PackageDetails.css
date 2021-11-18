@@ -1,0 +1,23 @@
+.img-size{
+    height: 70px;
+}
+.bg-white{
+    /* background-color: rgb(228, 4, 4); */
+}
+.tab-style{
+    /* background-color: white !important; */
+    color: black;
+    border-radius: 0px !important;
+    padding: 13px 25px;
+    /* border-bottom: 1px solid black !important; */
+}
+.tab-style:hover{
+    color: black;
+    cursor: pointer;
+}
+.tab-style-active {
+    background-color: black !important;
+    border-radius: 0px !important;
+    cursor: pointer;
+    padding: 13px 25px;
+}

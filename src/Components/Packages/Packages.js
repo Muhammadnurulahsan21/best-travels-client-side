@@ -5,7 +5,7 @@ import PackagesCard from "./../PackagesCard/PackagesCard";
 const Packages = () => {
   const [allPackages, setAllPackages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/packages")
+    fetch("https://frozen-ocean-73745.herokuapp.com/packages")
       .then((res) => res.json())
       .then((data) => setAllPackages(data.packages));
   }, []);
@@ -26,7 +26,7 @@ const Packages = () => {
       </div>
 
       <div className="container mb-5 mt-5">
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="row row-cols-1 row-cols-md-3 g-5">
           {allPackages.map((allPackage) => (
             <PackagesCard
               key={allPackage.key}

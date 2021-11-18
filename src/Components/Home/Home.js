@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import "./Home.css";
 import pic1 from "../../img/pic1.jpg";
@@ -7,8 +7,15 @@ import pic3 from "../../img/pic3.jpg";
 import pic4 from "../../img/pic-4.jpg";
 
 import { Link } from "react-router-dom";
+import HomePackagesCard from "../HomePackagesCard/HomePackagesCard";
 
 const Home = () => {
+  const [allPackages, setAllPackages] = useState([]);
+  useEffect(() => {
+    fetch("https://frozen-ocean-73745.herokuapp.com/packages")
+      .then((res) => res.json())
+      .then((data) => setAllPackages(data.packages));
+  }, []);
   return (
     <div className="custom-margin">
       <Carousel fade>
@@ -117,12 +124,25 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
 
+      <div>
       <div className="container pt-5 mt-3 mb-5">
         <h3 className="text-center text-secondary">TOP PROMOTION</h3>
         <h3 className="text-center text-muted best-travel fw-normal">
           BEST TRAVEL PACKAGES AVAILABLE
         </h3>
       </div>
+      <div className="container mb-5 mt-5">
+        <div className="row row-cols-1 row-cols-md-3 g-5">
+          {allPackages.slice(0,6).map((allPackage) => (
+            <HomePackagesCard
+              key={allPackage.key}
+              allPackage={allPackage}
+            ></HomePackagesCard>
+          ))}
+        </div>
+      </div>
+      </div>
+
       <div className="summer-banner px-5 mb-5 text-center text-light d-flex justify-content-center align-items-center">
         <div>
           <div className=" m-5">
@@ -158,7 +178,7 @@ const Home = () => {
           </div>
         </div>
         <div className="distanation-two ms-4">
-          <h5 className="fw-normal text-muted bg-light p-2">AFRICA</h5>
+          <h5 className="fw-normal text-muted bg-light p-2">DUBAI</h5>
         </div>
         <div className="distanation-three ms-4">
           <h5 className="fw-normal text-muted bg-light p-2">ASIA</h5>
@@ -168,7 +188,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="pt-5">
+      <div className="pt-5 pb-5">
       <div className="home-lower-banner mb-5 text-light d-flex align-items-center fw-normal">
         <div className="container">
           <div className="d-flex justify-content-center align-items-center">
