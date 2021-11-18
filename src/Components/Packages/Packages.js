@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Packages.css";
+import PackagesCard from './../PackagesCard/PackagesCard';
+
 
 const Packages = () => {
+  const [allPackages, setAllPackages] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:4000/packages")
+      .then((res) => res.json())
+      .then((data) => setAllPackages(data.packages));
+  }, []);
+
   return (
     <div className="custom-margin">
       <div className="pb-5">
@@ -17,27 +26,24 @@ const Packages = () => {
         </h3>
       </div>
 
-      <div className="container pb-5">
+      <div className="container mb-5 mt-5">
         <div className="row row-cols-1 row-cols-md-3 g-4">
-          <div className="col">
-            <div className="card h-100">
-              <img src="..." className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <button className="btn btn-outline-secondary">Book Now</button>
-              </div>
-            </div>
-          </div>
+          {allPackages.map((allPackage) => (
+            <PackagesCard
+              key={allPackage.key}
+              allPackage={allPackage}
+            ></PackagesCard>
+          ))}
         </div>
       </div>
 
 
-      
+
+
+
+
+
+
     </div>
   );
 };

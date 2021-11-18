@@ -4,7 +4,7 @@
         rgba(88, 84, 80, 0.39)
       ),
       url(../../img/packages-bannar.jpg);
-    height: 400px;
+    height: 280px;
     background-position: center;
     background-size: cover;
 }
@@ -16,5 +16,5 @@
     width: 220px;
     left: 43%;
     background-color: #e91e63;
-    bottom: 4%;
+    bottom: 20%;
 }
