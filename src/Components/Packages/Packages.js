@@ -4,10 +4,14 @@ import PackagesCard from "./../PackagesCard/PackagesCard";
 
 const Packages = () => {
   const [allPackages, setAllPackages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     fetch("https://frozen-ocean-73745.herokuapp.com/packages")
       .then((res) => res.json())
-      .then((data) => setAllPackages(data.packages));
+      .then((data) => {
+        setAllPackages(data.packages);
+        setIsLoading(false);
+      });
   }, []);
 
   return (
@@ -25,16 +29,24 @@ const Packages = () => {
         </h3>
       </div>
 
-      <div className="container mb-5 mt-5">
-        <div className="row row-cols-1 row-cols-md-3 g-5">
-          {allPackages.map((allPackage) => (
-            <PackagesCard
-              key={allPackage.key}
-              allPackage={allPackage}
-            ></PackagesCard>
-          ))}
+      {isLoading === true ? (
+        <div className="text-center py-5">
+          <div class="spinner-border text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="container mb-5 mt-5">
+          <div className="row row-cols-1 row-cols-md-3 g-5">
+            {allPackages.map((allPackage) => (
+              <PackagesCard
+                key={allPackage.key}
+                allPackage={allPackage}
+              ></PackagesCard>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

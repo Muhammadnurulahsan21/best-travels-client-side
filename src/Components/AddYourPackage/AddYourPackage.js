@@ -1,4 +1,3 @@
-// import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
@@ -8,7 +7,7 @@ const AddYourPackage = () => {
   const { register, reset, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    fetch("https://frozen-ocean-73745.herokuapp.com/packages", {
+    fetch("http://localhost:5000/packages", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -18,7 +17,6 @@ const AddYourPackage = () => {
         if (data.insertedId) {
           swal({
             title: "Package Added Successfully!",
-            // text: `Product Unique Key: ${pass}`,
             button: "OK!",
           });
         }
@@ -41,7 +39,7 @@ const AddYourPackage = () => {
         <div className="container pb-5">
           <div className="w-75 mx-auto pb-5">
             <div className="d-flex justify-content-center">
-              <form className="mt-4 row" onSubmit={handleSubmit(onSubmit)}>
+              <div className="mt-4 row">
                 <div className="col-12 col-md-6">
                   <div className="mb-2">
                     <label className="mb-2">Package Name*</label> <br />
@@ -53,36 +51,6 @@ const AddYourPackage = () => {
                     />
                   </div>
                   <div className="mb-2">
-                    <label className="mb-2">City Name</label> <br />
-                    <input
-                      className="form-control shadow-none"
-                      type="text"
-                      {...register("location", { required: true })}
-                      placeholder="Your City Name"
-                    />
-                  </div>
-                  <div className="mb-2">
-                    <label className="mb-2">Continent*</label> <br />
-                    <input
-                      className="form-control shadow-none"
-                      type="text"
-                      {...register("country", { required: true })}
-                      placeholder="Your Continent Name"
-                    />
-                  </div>
-                  <div className="mb-2">
-                    <label className="mb-2">City Special*</label> <br />
-                    <input
-                      className="form-control shadow-none"
-                      type="text"
-                      {...register("days", { required: true })}
-                      placeholder="City Special"
-                    />
-                  </div>
-                  
-                </div>
-                <div className="col-12 col-md-6">
-                <div className="mb-2">
                     <label className="mb-2">Package Price*</label> <br />
                     <input
                       className="form-control shadow-none"
@@ -94,22 +62,31 @@ const AddYourPackage = () => {
                     />
                   </div>
                   <div className="mb-2">
-                    <label className="mb-2">Discount*</label> <br />
+                    <label className="mb-2">City Special*</label> <br />
                     <input
                       className="form-control shadow-none"
-                      type="number"
-                      {...register("price", {
-                        required: true,
-                      })}
-                      placeholder="Discount Percentage%"
+                      type="text"
+                      {...register("City", { required: true })}
+                      placeholder="City Special"
+                    />
+                  </div>
+                </div>
+                <div className="col-12 col-md-6">
+                  <div className="mb-2">
+                    <label className="mb-2">Continent*</label> <br />
+                    <input
+                      className="form-control shadow-none"
+                      type="text"
+                      {...register("country", { required: true })}
+                      placeholder="Your Continent Name"
                     />
                   </div>
                   <div className="mb-2">
                     <label className="mb-2">Description*</label> <br />
                     <input
                       className="form-control shadow-none"
-                      type="number"
-                      {...register("price", {
+                      type="text"
+                      {...register("description", {
                         required: true,
                       })}
                       placeholder="Description"
@@ -121,19 +98,23 @@ const AddYourPackage = () => {
                     <input
                       className="form-control shadow-none"
                       type="text"
-                      {...register("img1", {
+                      {...register("img", {
                         required: true,
                       })}
-                      placeholder="Img Should Be 600px * 600px"
+                      placeholder="Img_Url"
                     />
                   </div>
                 </div>
                 <div className="text-center px-5 mt-3">
-                  <Button variant="btn btn-outline-secondary">
-                    Add Product
+                  <Button
+                    variant="btn btn-outline-secondary"
+                    onClick={handleSubmit(onSubmit)}
+                    value="submit"
+                  >
+                    Add Package
                   </Button>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>

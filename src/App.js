@@ -7,9 +7,6 @@ import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import PackageDetails from './Components/PackageDetails/PackageDetails';
-import Cart from './Components/Cart/Cart';
-import CheckOut from './Components/CheckOut/CheckOut';
-import OrderReceived from './Components/OrderReceived/OrderReceived';
 import Login from "./Components/Login/Login";
 import Packages from "./Components/Packages/Packages";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
@@ -48,15 +45,6 @@ function App() {
             </PrivateRoute>
             <PrivateRoute exact path="/package-details/:packageKey">
               <PackageDetails></PackageDetails>
-            </PrivateRoute>
-            <PrivateRoute exact path="/cart">
-              <Cart></Cart>
-            </PrivateRoute>
-            <PrivateRoute exact path="/check-out">
-              <CheckOut></CheckOut>
-            </PrivateRoute>
-            <PrivateRoute exact path="/order-received/:orderID">
-              <OrderReceived></OrderReceived>
             </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>

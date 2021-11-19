@@ -11,10 +11,14 @@ import HomePackagesCard from "../HomePackagesCard/HomePackagesCard";
 
 const Home = () => {
   const [allPackages, setAllPackages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     fetch("https://frozen-ocean-73745.herokuapp.com/packages")
       .then((res) => res.json())
-      .then((data) => setAllPackages(data.packages));
+      .then((data) => {
+        setAllPackages(data.packages);
+        setIsLoading(false);
+      });
   }, []);
   return (
     <div className="custom-margin">
@@ -131,16 +135,24 @@ const Home = () => {
           BEST TRAVEL PACKAGES AVAILABLE
         </h3>
       </div>
-      <div className="container mb-5 mt-5">
-        <div className="row row-cols-1 row-cols-md-3 g-5">
-          {allPackages.slice(0,6).map((allPackage) => (
-            <HomePackagesCard
-              key={allPackage.key}
-              allPackage={allPackage}
-            ></HomePackagesCard>
-          ))}
+      {isLoading === true ? (
+        <div className="text-center py-5">
+          <div class="spinner-border text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="container mb-5 mt-5">
+          <div className="row row-cols-1 row-cols-md-3 g-5">
+            {allPackages.slice(0,6).map((allPackage) => (
+              <HomePackagesCard
+                key={allPackage.key}
+                allPackage={allPackage}
+              ></HomePackagesCard>
+            ))}
+          </div>
+        </div>
+      )}
       </div>
 
       <div className="summer-banner px-5 mb-5 text-center text-light d-flex justify-content-center align-items-center">
