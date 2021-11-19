@@ -129,30 +129,30 @@ const Home = () => {
       </Carousel>
 
       <div>
-      <div className="container pt-5 mt-3 mb-5">
-        <h3 className="text-center text-secondary">TOP PROMOTION</h3>
-        <h3 className="text-center text-muted best-travel fw-normal">
-          BEST TRAVEL PACKAGES AVAILABLE
-        </h3>
-      </div>
-      {isLoading === true ? (
-        <div className="text-center py-5">
-          <div class="spinner-border text-secondary" role="status">
-            <span class="visually-hidden">Loading...</span>
-          </div>
+        <div className="container pt-5 mt-3 mb-5">
+          <h3 className="text-center text-secondary">TOP PROMOTION</h3>
+          <h3 className="text-center text-muted best-travel fw-normal">
+            BEST TRAVEL PACKAGES AVAILABLE
+          </h3>
         </div>
-      ) : (
-        <div className="container mb-5 mt-5">
-          <div className="row row-cols-1 row-cols-md-3 g-5">
-            {allPackages.slice(0,6).map((allPackage) => (
-              <HomePackagesCard
-                key={allPackage.key}
-                allPackage={allPackage}
-              ></HomePackagesCard>
-            ))}
+        {isLoading === true ? (
+          <div className="text-center py-5">
+            <div class="spinner-border text-secondary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
           </div>
-        </div>
-      )}
+        ) : (
+          <div className="container mb-5 mt-5">
+            <div className="row row-cols-1 row-cols-md-3 g-5">
+              {allPackages.slice(0, 6).map((allPackage) => (
+                <HomePackagesCard
+                  key={allPackage.key}
+                  allPackage={allPackage}
+                ></HomePackagesCard>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="summer-banner px-5 mb-5 text-center text-light d-flex justify-content-center align-items-center">
@@ -201,30 +201,30 @@ const Home = () => {
       </div>
 
       <div className="pt-5 pb-5">
-      <div className="home-lower-banner mb-5 text-light d-flex align-items-center fw-normal">
-        <div className="container">
-          <div className="d-flex justify-content-center align-items-center">
-            <div className="d-flex justify-content-center align-items-center gap-5">
-              <div className="text-center ms-5 pe-5 me-5">
-                <h1 className="fw-normal text-size">75</h1>
-                <h6 className="fw-normal bg-danger p-2">DESTINATIONS</h6>
-              </div>
-              <div className="text-center ms-5 pe-5 me-5">
-                <h1 className="fw-normal text-size">149</h1>
-                <h6 className="fw-normal bg-warning p-1">TOURS PACK</h6>
-              </div>
-              <div className="text-center ms-5  pe-5 me-5">
-                <h1 className="fw-normal text-size">32</h1>
-                <h6 className="fw-normal bg-success p-1">CRUISES</h6>
-              </div>
-              <div className="text-center ps-5 ms-5">
-                <h1 className="fw-normal text-size ">24</h1>
-                <h6 className="fw-normal bg-info p-1">HOUR SUPPORT</h6>
+        <div className="home-lower-banner mb-5 text-light d-flex align-items-center fw-normal">
+          <div className="container">
+            <div className="d-flex justify-content-center align-items-center">
+              <div className="d-flex justify-content-center align-items-center gap-5">
+                <div className="text-center ms-5 pe-5 me-5">
+                  <h1 className="fw-normal text-size">75</h1>
+                  <h6 className="fw-normal bg-danger p-2">DESTINATIONS</h6>
+                </div>
+                <div className="text-center ms-5 pe-5 me-5">
+                  <h1 className="fw-normal text-size">149</h1>
+                  <h6 className="fw-normal bg-warning p-1">TOURS PACK</h6>
+                </div>
+                <div className="text-center ms-5  pe-5 me-5">
+                  <h1 className="fw-normal text-size">32</h1>
+                  <h6 className="fw-normal bg-success p-1">CRUISES</h6>
+                </div>
+                <div className="text-center ps-5 ms-5">
+                  <h1 className="fw-normal text-size ">24</h1>
+                  <h6 className="fw-normal bg-info p-1">HOUR SUPPORT</h6>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );

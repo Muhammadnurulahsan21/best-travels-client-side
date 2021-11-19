@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 import swal from "sweetalert";
 import "./ManageAllBookings.css";
 
 const ManageAllBookings = () => {
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState();
   useEffect(() => {
-    fetch("")
+    fetch(`https://frozen-ocean-73745.herokuapp.com/bookings`)
       .then((res) => res.json())
-      .then((data) => setOrders(data.orders));
+      .then((data) => setOrders(data));
   }, []);
+  console.log(setOrders);
+  console.log(orders);
   const handleDelete = (id) => {
     swal({
       title: "Are You Sure to Delete?",
-      text: "Once deleted, you will not be able to recover this order data!",
+      text: "If deleted, booking will be canceled!",
       icon: "warning",
       buttons: true,
       dangerMode: true,
@@ -26,15 +29,17 @@ const ManageAllBookings = () => {
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
-              swal("Order has been deleted!", {
+              swal("Booking has been Canceled!", {
                 icon: "success",
               });
             }
-            const newOrders = orders.filter((order) => order._id !== id);
-            setOrders(newOrders);
+            const newBookings = orders.filter(
+              (booking) => booking._id !== id
+            );
+            setOrders(newBookings);
           });
       } else {
-        swal("Order Info is Safe!");
+        swal("Booking Info is Safe!");
       }
     });
   };
@@ -50,17 +55,25 @@ const ManageAllBookings = () => {
       <div className="container py-4 ">
         <div className="row bg-white rounded shadow p-4">
           <div className="col-12 col-md-2">
-            <h6 className="py-2 border-bottom cursor border-dark">Manage Orders</h6>
-            <h6 className="py-2 border-bottom cursor border-dark">Manage Users</h6>
-            <h6 className="py-2 border-bottom cursor border-dark">Add New Package</h6>
-            <h6 className="py-2 border-bottom cursor border-dark">Update Package</h6>
+            <h6 className="py-2 border-bottom cursor border-dark">
+              Manage Booking
+            </h6>
+            <h6 className="py-2 border-bottom cursor border-dark">
+              Manage Users
+            </h6>
+            <h6 className="py-2 border-bottom cursor border-dark">
+              Add New Package
+            </h6>
+            <h6 className="py-2 border-bottom cursor border-dark">
+              Update Package
+            </h6>
           </div>
           <div className="col-12 col-md-10 border-start">
             <table className="table">
               <thead>
                 <tr className="text-center">
                   <th scope="col">#</th>
-                  <th scope="col">Order ID</th>
+                  <th scope="col">Booking ID</th>
                   <th scope="col">User Name</th>
                   <th scope="col">User Email</th>
                   <th scope="col">Status</th>
@@ -82,20 +95,11 @@ const ManageAllBookings = () => {
                       )}
                     </td>
                     <td>
-                      <Link to={`/update-order/${order?._id}`}>
-                        <button
-                          className="mx-1 btn btn-info text-white shadow-none py-1"
-                          data-bs-toggle="modal"
-                          data-bs-target="#exampleModal"
-                        >
-                          <i className="fas fa-edit"></i>
-                        </button>
-                      </Link>
                       <button
                         onClick={() => handleDelete(order?._id)}
                         className="mx-1 btn btn-danger shadow-none py-1"
                       >
-                        <i className="fas fa-trash-alt"></i>
+                        <FontAwesomeIcon icon={faTrashAlt} size="lg" />
                       </button>
                     </td>
                   </tr>
