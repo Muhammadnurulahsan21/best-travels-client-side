@@ -11,8 +11,8 @@ const ManageAllBookings = () => {
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
-  console.log(setOrders);
-  console.log(orders);
+
+  
   const handleDelete = (id) => {
     swal({
       title: "Are You Sure to Delete?",

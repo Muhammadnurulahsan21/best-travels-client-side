@@ -14,6 +14,7 @@ const MyBookings = () => {
       .then((data) => setBookings(data));
   }, []);
   const handleDelete = (id) => {
+    console.log(id);
     swal({
       title: "Are You Sure to Delete?",
       text: "If deleted, booking will be canceled!",
